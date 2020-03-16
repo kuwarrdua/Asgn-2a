@@ -4,3 +4,6 @@ Also now we have to use Identity.sql query to add the aspnet tables into our own
 Also I have done the google authentication part successfully to link the user google account for:-
 Since, the user can only create, edit or delete when the user is authenticated so that requires an account to be signed up.
 Also I have created marie@gc.ca account as per the requirement.
+The user can view the details of the tables even if it is anonymous.
+That are the changes which I have made in this project.
+Last but not the least I have configured the facebook authentication as well. So that is the part A of second assignment and thats what I have learnt from it. :)
