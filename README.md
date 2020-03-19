@@ -7,3 +7,4 @@ Also I have created marie@gc.ca account as per the requirement.
 The user can view the details of the tables even if it is anonymous.
 That are the changes which I have made in this project.
 Last but not the least I have configured the facebook authentication as well. So that is the part A of second assignment and thats what I have learnt from it. :)
+Also I made constructors which were one of the reasons for leseer marks in assignment-1 and therefore corrected that as well.
