@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CarStockingg.Models.Stock>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@if (User.Identity.IsAuthenticated)
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CarMake)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CarMake)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Supplier.SupplierId)
+                </td>
+                <td>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <p>
+                            <a asp-action="Edit" asp-route-id="@item.StockId">Edit</a> |
+                        </p>
+                    }
+
+                    <a asp-action="Details" asp-route-id="@item.StockId">Details</a> |
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                <p>
+                    <a asp-action="Delete" asp-route-id="@item.StockId">Delete</a>
+                </p>
+                    }
+                       
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
